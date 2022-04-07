@@ -33,10 +33,10 @@ Slony-I是这种复制类型的一个例子。它使用表粒度，并且支持�
 在同步多主控机复制中，每一个服务器能够接受写请求，并且在每一个事务提交之前，被修改的数据会被从原始服务器传送给每一个其他服务器。繁重的写活动可能导致过多的锁定和提交延迟，进而导致很差的性能。读请求可以被发送给任意服务器。某些实现使用共享磁盘来减少通信负荷。同步多主控机复制主要对于读负载最好，尽管它的大优点是任意服务器都能接受写请求 — 没有必要在主服务器和后备服务器之间划分负载，并且因为数据修改被从一个服务器发送到另一个服务器，不会有非确定函数（如random()）的问题。
 
 **高可用、负载均衡和复制特性矩阵表**
-![](vx_images/543170511220448.png)
+![543170511220448](https://user-images.githubusercontent.com/65155344/162113016-bda2c259-828a-4312-a2a6-311bb9402ea4.png)
 
 **集群方案对比表**
-![](vx_images/494071011238874.png)
+![494071011238874](https://user-images.githubusercontent.com/65155344/162113044-933f11d0-90ff-4c0b-89c9-4957ecf74806.png)
 
 参考：[high-availability.html](https://www.postgresql.org/docs/current/high-availability.html)
 [Replication,_Clustering,_and_Connection_Pooling](https://wiki.postgresql.org/wiki/Replication,_Clustering,_and_Connection_Pooling)
